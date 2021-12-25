@@ -1,0 +1,14 @@
+.container-fluid{
+  height: 700px;
+  min-width: 100%;
+}
+
+.btn-primary
+{
+  color: yellow;
+  font-size: large;
+  font-weight: bold;
+  border-color: rgba(192, 66, 241, 0.925);
+  margin-left: 4pt;
+  padding-top: 3pt;
+}

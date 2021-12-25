@@ -6,11 +6,11 @@
         background-image: linear-gradient(180deg, #2E1760, #33A1FD);
         border: solid 4px rgba(192, 66, 241, 0.925);
     }
-    
+
     li {
         float: left;
     }
-    
+
     li a {
         display: block;
         color: white;
@@ -18,15 +18,15 @@
         padding: 14px 16px;
         text-decoration: none;
     }
-    
+
     li a:hover:not(.active) {
         background-image: linear-gradient(180deg, rgb(56, 110, 228), rgb(124, 98, 241));
     }
-    
+
     .active {
         background-image: linear-gradient(180deg, #5d0af7, #7751ca);
     }
-    
+
     a:hover {
         cursor: pointer;
     }
