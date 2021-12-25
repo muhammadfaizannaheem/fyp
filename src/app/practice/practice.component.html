@@ -1,0 +1,5 @@
+<button class="btn btn-primary" (click)="changeStatus()">Show Paragraph</button>
+<p *ngIf="status">practice works!</p>
+<div *ngFor="let a of clickCounter; let i = index" [ngStyle]="{backgroundColor : i >= 4 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': i >= 4}">
+    {{a}}
+</div>

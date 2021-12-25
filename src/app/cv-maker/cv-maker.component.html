@@ -1,0 +1,201 @@
+<div *ngIf="cvForm">
+    <!-- nimra cv start here -->
+
+
+    <div class="container" id="cv-form">
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <!--First Col-->
+                <div class="card mt-4" class="nameCard">
+                    <div class="card-header background">
+                        <h5 class="text-center" style="font-weight: 980;">Personal Information </h5>
+                    </div>
+                </div>
+                <!--Personal Information-->
+                <div class="form-group ">
+                    <label for="NameField ">Your Name</label>
+                    <input type="text" placeholder="Enter Name" class="form-control" [(ngModel)]="name">
+                </div>
+
+
+                <div class="form-group">
+                    <!--Contact Number-->
+                    <label for="ContactField">Your Contact Number</label>
+                    <input type="text" placeholder="Enter Contact" class="form-control" [(ngModel)]="contact">
+                </div>
+
+
+
+                <div class="form-group">
+                    <!--Address-->
+                    <label for="Addressfield">Your Address </label>
+                    <textarea placeholder="Enter Here" class="form-control" [(ngModel)]="address">
+            </textarea>
+                </div>
+
+                <!-- Objective Input -->
+                <div class="form-group">
+                    <label for="Addressfield">Your Objective </label>
+                    <textarea placeholder="Enter Here" class="form-control" [(ngModel)]="objective">
+                    </textarea>
+                </div>
+
+                <!-- Goals Input -->
+                <div class="form-group">
+                    <label for="Addressfield">Your Goals </label>
+                    <textarea placeholder="Enter Here" class="form-control" [(ngModel)]="goals">
+                    </textarea>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="col-md-6">
+                <!--Second Col-->
+                <div class="card mt-4" class="nameCard">
+                    <div class="card-header background">
+                        <h5 class="text-center" style="font-weight: 980;">Professional Information </h5>
+                    </div>
+                </div>
+                <!--Professional Information-->
+
+                <!-- marks in matric -->
+                <div class="form-group">
+                    <label for="">Matric</label>
+                    <input placeholder="Enter like => 85% marks in Science Group" class="form-control" [(ngModel)]="matricMarks">
+
+                </div>
+
+                <!-- marks in intermediate -->
+                <div class="form-group">
+                    <label for="">Intermediate</label>"
+                    <input placeholder="Enter like => 85% marks in ICS" class="form-control" [(ngModel)]="intermediateMarks">
+
+                </div>
+
+                <!-- Bachelors -->
+                <div class="form-group">
+                    <label for="">Bachelors (Optional) </label>
+                    <input placeholder="3.0 Cgpa in BS Software Engineering" class="form-control" [(ngModel)]="bachelors">
+
+                </div>
+                <div class="form-group mt-1" id="we">
+                    <label for="">Work Experience </label>
+                    <!--work experience-->
+                    <textarea placeholder="Enter Here" rows="3" class="form-control weField" [(ngModel)]="workExperience">  </textarea>
+                    <!--New text Area-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- cvs end here -->
+
+
+    <div class="row justify-content-center">
+        <button class="btn btn-primary" (click)="onCvCreated()">Create CV</button>
+    </div>
+</div>
+
+<!-- CV OutPut Format -->
+<div *ngIf="cvStatus" class="container" id="content" #content>
+
+    <br>
+    <br>
+    <div class="card mt-4" class="nameCard">
+        <div class="card-header background">
+            <h2 class="text-center" style="font-weight: 980;">{{name}} </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 text-center py-5">
+            <!--first colm-->
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Picture</h3>
+                </div>
+                <div class="card-body">
+                    <img src="../assets/userPic.png" alt="" class="myimg">
+                </div>
+            </div>
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Personal Information</h3>
+                </div>
+                <div class="card-body">
+                    <p> {{name}}</p>
+                    <p> {{contact}}</p>
+                    <p>{{address}} </p>
+                </div>
+            </div>
+            <hr>
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Goals</h3>
+                </div>
+                <div class="card-body">
+                    <p> {{goals}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 py-5">
+            <!--2nd colm-->
+
+            <!--objective card-->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Objective</h3>
+                </div>
+                <div class="card-body">
+                    <p> {{objective}}</p>
+                </div>
+            </div>
+            <!--Work Experience-->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Work Experience</h3>
+                </div>
+                <div class="card-body">
+                    <p>{{workExperience}} </p>
+                </div>
+            </div>
+
+
+            <!--Academic Qualification-->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Academic Qualification</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="aqT">
+                        <li>{{matricMarks}}
+                        </li>
+                        <li> {{intermediateMarks}}
+                        </li>
+                        <li>{{bachelors}}
+                        </li>
+                        <!-- <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, aspernatur assumenda, Ipsum, dolorum?
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Cv Output Format Closed -->
+
+<div class="row justify-content-center">
+    <button *ngIf="cvStatus" (click)="makePDF()" class="btn btn-primary">Download</button>
+</div>
+<!-- <app-practice></app-practice> -->
