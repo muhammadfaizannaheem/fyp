@@ -1,3 +1,4 @@
+// type script for the app component
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CvMakerComponent } from './cv-maker.component';
