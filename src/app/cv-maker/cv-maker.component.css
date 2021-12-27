@@ -12,6 +12,9 @@
     margin-top: 32pt;
 }
 
+.container-fluid{
+  padding-bottom: 3%;
+}
 
 /* .btn {
     position: center;

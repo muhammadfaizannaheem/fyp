@@ -1,4 +1,9 @@
-<div *ngIf="cvForm">
+<div *ngIf="cvForm" class="container-fluid" style="
+background-image: url('../../assets/bg6.png');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+">
     <!-- nimra cv start here -->
 
 
@@ -44,16 +49,10 @@
                 <!-- Objective Input -->
                 <div class="form-group">
                     <label for="Addressfield">Your Objective </label>
-                    <textarea placeholder="Enter Here" class="form-control" [(ngModel)]="objective">
+                    <textarea placeholder="Enter Here" rows="3" class="form-control" [(ngModel)]="objective">
                     </textarea>
                 </div>
 
-                <!-- Goals Input -->
-                <div class="form-group">
-                    <label for="Addressfield">Your Goals </label>
-                    <textarea placeholder="Enter Here" class="form-control" [(ngModel)]="goals">
-                    </textarea>
-                </div>
 
             </div>
 
@@ -68,7 +67,12 @@
                     </div>
                 </div>
                 <!--Professional Information-->
-
+                 <!-- Goals Input -->
+                 <div class="form-group">
+                  <label for="Addressfield">Your Goals </label>
+                  <textarea placeholder="Enter Here" class="form-control" [(ngModel)]="goals">
+                  </textarea>
+              </div>
                 <!-- marks in matric -->
                 <div class="form-group">
                     <label for="">Matric</label>
@@ -109,6 +113,13 @@
 </div>
 
 <!-- CV OutPut Format -->
+<div class="container-fluid" style="
+background-image: url('../../assets/bg6.png');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+">
+
 <div *ngIf="cvStatus" class="container" id="content" #content>
 
     <br>
@@ -199,10 +210,10 @@
     </div>
 </div>
 
-
 <!-- Cv Output Format Closed -->
 
 <div class="row justify-content-center">
     <button *ngIf="cvStatus" (click)="makePDF()" class="btn btn-primary">Download</button>
 </div>
 <!-- <app-practice></app-practice> -->
+</div>
