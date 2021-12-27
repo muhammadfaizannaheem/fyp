@@ -23,6 +23,7 @@ export class CvMakerComponent implements OnInit {
   }
    name : string ="";
    contact : string ="";
+   email : string = "";
    address : string ="";
    objective : string ="";
    goals : string="";
@@ -45,7 +46,8 @@ export class CvMakerComponent implements OnInit {
 
     let  cvData={
       name: this.name,
-      number:this.contact,
+      contact:this.contact,
+      email:this.email,
       addres:this.address,
       objective:this.objective,
       goals:this.goals,
