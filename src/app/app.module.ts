@@ -11,12 +11,14 @@ import { IFinderComponent } from './i-finder/i-finder.component';
 
 // http import
 import { HttpClientModule } from '@angular/common/http';
+import { CvDisplayComponent } from './cv-display/cv-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     route,
     IFinderComponent,
+    CvDisplayComponent,
   ],
   imports: [
     BrowserModule,

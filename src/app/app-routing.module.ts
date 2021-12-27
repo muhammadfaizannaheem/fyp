@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CvDisplayComponent } from './cv-display/cv-display.component';
 import { CvMakerComponent } from './cv-maker/cv-maker.component';
 import { HomeComponent } from './home/home.component';
 import { IFinderComponent } from './i-finder/i-finder.component';
@@ -22,6 +23,10 @@ pathMatch:'full'
   {
     path:'interestFinder',
     component: IFinderComponent
+  },
+  {
+    path:'displayCv',
+    component:CvDisplayComponent
   }
 ];
 

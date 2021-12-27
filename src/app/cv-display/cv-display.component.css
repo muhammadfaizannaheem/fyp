@@ -1,0 +1,22 @@
+.card{
+  margin: 0pt;
+  padding: 5pt;
+}
+.card-header{
+  padding: 0pt;
+  margin: 0pt;
+}
+.card-body{
+  margin: 0%;
+  padding: 0pt;
+}
+.py-5{
+  padding: 10pt;
+  margin: 0pt;
+  padding-bottom: 6pt !important;
+  padding-top: 6pt !important;
+}
+
+.c1{
+  margin-bottom: 10pt;
+}

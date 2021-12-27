@@ -1,0 +1,96 @@
+  <!-- output check -->
+  <div class="container c1" *ngFor="let c of cv">
+
+    <div class="card mt-4">
+    <div class="card-header background">
+        <h5>Cv No : {{c.cv_id}}</h5>
+    </div>
+    <div class="card-body">
+    <div class="row">
+      <!-- Column1 -->
+        <div class="col-md-4 text-center py-5">
+
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h4>Personal Information</h4>
+            </div>
+              <div class="card-body">
+                  <p> {{c.name}}</p>
+              </div>
+              <div class="card-body">
+                <p> {{c.contact}}</p>
+              </div>
+            <div class="card-body">
+              <p>{{c.addres}} </p>
+            </div>
+          </div>
+
+
+            <!-- <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Picture</h3>
+                </div>
+                <div class="card-body">
+                    <img src="../assets/userPic.png" alt="" class="myimg">
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-4 py-5">
+          <!--2nd colm-->
+
+
+          <!--objective card-->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h4>Professional Information</h4>
+            </div>
+              <div class="card-body">
+                  <p> {{c.objective}}</p>
+              </div>
+              <div class="card-body">
+                <p> {{c.goals}}</p>
+              </div>
+            <div class="card-body">
+              <p>{{c.workExp}} </p>
+            </div>
+          </div>
+
+      </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-4 text-center py-5">
+          <!--first colm-->
+          <div class="card mt-4">
+            <div class="card-header background">
+                <h3>Academic Qualification</h3>
+            </div>
+            <div class="card-body" style="text-align: left;">
+                <ul>
+                    <li>{{c.matric}}
+                    </li>
+                    <li> {{c.intermedite}}
+                    </li>
+                    <li>{{c.bachelor}}
+                    </li>
+                    <!-- <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, aspernatur assumenda, Ipsum, dolorum?
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+      </div>
+
+
+
+
+      <!-- Column 3 -->
+
+
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- <button class="btn btn-primary" (click)="getCvData()">Refresh</button> -->

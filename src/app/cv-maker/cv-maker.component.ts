@@ -1,10 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Cv } from './cv.model';
-
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { CvAPIService } from '../cv-api.service';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cv-maker',
@@ -14,7 +13,7 @@ import { CvAPIService } from '../cv-api.service';
 export class CvMakerComponent implements OnInit {
 
   @ViewChild('content', {static: false}) el!: ElementRef<HTMLImageElement>;
-  constructor(
+  constructor(private http: HttpClient,
     private newcv:CvAPIService
   ) {
     newcv.sendData()
@@ -43,7 +42,25 @@ export class CvMakerComponent implements OnInit {
   {
     this.cvForm=false;
     this.cvStatus=true;
+
+    let  cvData={
+      name: this.name,
+      number:this.contact,
+      addres:this.address,
+      objective:this.objective,
+      goals:this.goals,
+      matric:this.matricMarks,
+      intermedite:this.intermediateMarks,
+      bachelor:this.bachelors,
+      workExp:this.workExperience
+   }
+
+   this.http.post('https://localhost:44313/api/cv_records', cvData, { responseType: 'json' }).subscribe(resp => {
+      console.log(resp);
+      alert('safe data successfully!!!!')
+})
   }
+
 
   makePDF(){
 
